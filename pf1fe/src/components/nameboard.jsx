@@ -3,6 +3,7 @@ import { Grid, Typography, ThemeProvider } from "@mui/material";
 import { createTheme } from '@mui/material/styles';
 import styles from './banner.module.css';
 import Cardcomponent from './cards';
+import { Projectcards } from './projectcards';
 
 const theme = createTheme({
     typography: {
@@ -10,6 +11,36 @@ const theme = createTheme({
         // Define other global typography settings here
     },
 });
+
+
+const myprojects =[
+{projectname : "Ecommerce",
+  url : "https://sparkly-fox-55236c.netlify.app/",
+  description : "An ecommerce project showcasing stylish products with detailed descriptions, responsive design, and seamless cart functionality."
+  , imageurl : "https://cdn-icons-png.flaticon.com/512/8764/8764182.png"
+},
+{projectname : "taskmanager",
+  url : "https://gentle-cuchufli-dcdb92.netlify.app/",
+  imageurl : "https://cdn.dribbble.com/users/268665/screenshots/1554614/icon.jpg",
+  description : "An intuitive task manager app designed for efficient task organization, prioritization, and seamless user experience across devices."
+},
+{projectname : "factsgenerator",
+  url : "https://silver-hamster-315a8e.netlify.app/"
+  , imageurl : "https://tse2.mm.bing.net/th?id=OIP.Tnzm9Ip_dG65T7eVXYl5vwHaHa&pid=Api&P=0&h=220",
+  description : "A fun and educational random facts generator app providing users with interesting and surprising facts on various topics."
+}
+,
+
+
+
+
+
+
+]
+
+
+
+
 
 const technologies = [
     {
@@ -51,6 +82,10 @@ var skillsets = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg1MndL-
 export function Nameboard() {
     return (
         <ThemeProvider theme={theme}>
+
+          <Grid sm={12}>
+
+          
             <Grid container className={styles.Nameboard} item sm={12}>
                 <Typography component="div" className={styles.customFontStyle}>
                     <Typography variant="h3" gutterBottom style={{"color" : "white" , "marginLeft" : "60px" , "fontSize" : "medium",
@@ -60,10 +95,10 @@ export function Nameboard() {
                     </Typography>
                     <Typography variant="body1" style={{"color" : "#FF7F7F", "marginLeft" : "60px"
 
-, "fontFamily" : "sans-serif"
+, "fontFamily" : "sans-serif" , fontStyle : "italic"
 
                     }} onMouseEnter={(e) => e.target.style.color = 'Red'} onMouseLeave={(e) => e.target.style.color = '#FF7F7F'}>
-                        A full-stack developer proficient in React, JavaScript, MongoDB, SQL, and Node.js. Possesses a comprehensive skill set for both front-end and back-end development.
+                        A full-stack developer proficient in React, JavaScript, MongoDB, SQL, and Node.js. Expert in designing responsive UIs, building scalable APIs, and managing databases. Combines strong problem-solving skills with a passion for creating seamless user experiences and efficient server-side solutions
                     </Typography>
 
 <Typography variant="h1" style={{"color" : "white", "marginLeft" : "60px" , "marginTop" : "15px" , "fontSize" : "medium"}}  onMouseEnter={(event)=>event.target.style.color ="gold"} onMouseLeave={(event)=>{event.target.style.color ="white"}} >
@@ -98,8 +133,61 @@ Skills
                          
                 </Typography>
                
+
+
+
+
                 
             </Grid>
+
+
+
+
+
+
+<Grid sm={12} className={styles.Nameboard} item>
+
+<Typography variant="h3" gutterBottom style={{"color" : "white" , "marginLeft" : "60px" , "fontSize" : "medium",
+                         "fontFamily" : "unset"
+                    }} onMouseEnter={(e) => e.target.style.color = 'gold'} onMouseLeave={(e) => e.target.style.color = 'white'}>
+                        Projects :
+                    </Typography>
+
+
+<Grid  md={12}   sm={12} sd ={12} container style={{ display : "flex" , flexDirection : 'column' ,
+   backgroundColor : 'black'  , marginLeft : "0rem"
+}}>
+
+{ myprojects.map((item)=>(
+
+
+//
+<Grid item>
+
+<Projectcards key={item} myprojects ={item}/>
+
+</Grid>
+
+
+))
+
+
+}
+
+</Grid>
+
+
+
+
+
+  
+</Grid>
+
+            </Grid>
+
+
+
+
         </ThemeProvider>
     );
 }

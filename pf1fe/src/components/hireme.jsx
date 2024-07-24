@@ -72,6 +72,7 @@ export default function Hireme() {
   };
 
   const  handleSubmit =  async (event) => {
+    console.log(userCredentials);
 
 console.log(`test`);
 
@@ -259,6 +260,7 @@ please Enter all the required details !
           variant="contained"
           color="primary"
           onClick={()=>{
+            console.log();
 
             handleSubmit();
           }}

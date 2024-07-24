@@ -59,9 +59,9 @@ const [expanded, setExpanded] = React.useState(false);
   };
 
   return (
-    <Card sx={{ maxWidth: 305 }} style={{"marginLeft" : "15px" 
+    <Card sx={{ maxWidth: 250 , minWidth : 250 }} style={{"marginLeft" : "15px" 
 
-        , "marginTop" : "10px"
+        , "marginTop" : "20px"
     }}>
       <Typography variant="h5" style={{"fontFamily" : "sans-serif" , "fontSize" : "medium"
         ,"padding" : "10px" , "textAlign" : "center"

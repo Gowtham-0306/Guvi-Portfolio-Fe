@@ -46,11 +46,11 @@ export function Navbar() {
                     </Link>
                   </Grid>
                   <Grid item>
-
-
+                   
+                    <a href="https://drive.google.com/drive/folders/1BtDDcSBEwU-gyi9mccHcuwdbLyWOVPik"  style={{color : ishiremepresent ? "gold" : "white",  textDecoration : "none"}}   onMouseEnter={(e) => e.target.style.color = 'gold' }
+        onMouseLeave={(e) => e.target.style.color =  'white'} >My Resume</a>
                   
-                  {/* <a href="" style={{ color: 'white', textDecoration: 'none' }} onMouseEnter={(e) => e.target.style.color = 'gold'} onMouseLeave={(e) => e.target.style.color = 'white'}>Certification</a>
-                   */}
+                  
                   </Grid>
                 </Grid>
               </Grid>
