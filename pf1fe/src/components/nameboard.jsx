@@ -103,7 +103,7 @@ export function Nameboard() {
 
 <Typography variant="h1" style={{"color" : "white", "marginLeft" : "60px" , "marginTop" : "15px" , "fontSize" : "medium"}}  onMouseEnter={(event)=>event.target.style.color ="gold"} onMouseLeave={(event)=>{event.target.style.color ="white"}} >
 
-Skills
+Skills :
 
 </Typography >
 <Grid container style={{"display" : "flex" , "alignItems" : "center"
